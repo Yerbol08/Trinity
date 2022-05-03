@@ -30,7 +30,6 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
 
-
         val data = arrayListOf<HomeItems>()
         data.add(HomeItems("Манты паровые с говядиной", R.drawable.manty, "Рубленная говядина, завернутая в тонкое тесто 1 шт", "195 ₸"))
         data.add(HomeItems("Тефтели 1 шт.", R.drawable.teftelya, "Колобок из говяжьего фарша и риса под морковно-томатным соусом, подается со сметаной. 1 шт.", "385 ₸"))

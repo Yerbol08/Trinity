@@ -8,4 +8,6 @@
     <string name="i_am_a_new_user">Я новый пользователь</string>
     <string name="sign_in">Войти</string>
     <string name="i_m_already_a_member">У меня уже есть аккаунт</string>
+
+
 </resources>
