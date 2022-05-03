@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.enu.trinity.R
 import com.enu.trinity.databinding.FragmentDashboardBinding
+import com.enu.trinity.ui.home.HomeAdapter
+import com.enu.trinity.ui.home.HomeItems
 
 class DashboardFragment : Fragment() {
 
@@ -28,10 +31,14 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val data = arrayListOf<TableItems>()
+        for (i in 1..10){
+            data.add(TableItems("$i", R.drawable.table))
         }
+
+
+        val adapter = context?.let { TableAdapter(data, it) }
+        binding.recyclerViewTable.adapter = adapter
         return root
     }
 
